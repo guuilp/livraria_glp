@@ -1,0 +1,63 @@
+<div class="well">
+  <div>
+    <h2>Incluir cliente {{cliente.nome}}</h2>
+    <div class="form-group">	
+        <label>Nome</label>
+        <input class="form-control" type="text" ng-model="cliente.nome" ng-trim="true"/>
+    </div>
+    <div class="form-group">
+        <label>CPF</label>
+        <input class="form-control" type="text" ng-model="cliente.cpf"/>
+    </div>
+    <div class="form-group">
+        <label>RG</label>
+        <input class="form-control" type="text" ng-model="cliente.rg"/>
+    </div>
+    <div class="form-group">
+        <label>Data de Nascimento</label>
+        <input class="form-control" type="text" ng-model="cliente.nascimento"/>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" type="text" ng-model="cliente.email"/>
+    </div>
+    <div class="form-group">
+        <label>Telefone</label>
+        <input class="form-control" type="text" ng-model="cliente.telefone"/>
+    </div>
+    <div class="form-group">
+        <label>CEP</label>
+        <input class="form-control" type="text" ng-model="cliente.cep"/>
+    </div>
+    <div class="form-group">
+        <label>Endereço</label>
+        <input class="form-control" type="text" ng-model="cliente.endereco"/>
+    </div>
+    <div class="form-group">
+        <label>Número</label>
+        <input class="form-control" type="text" ng-model="cliente.numero"/>
+    </div>
+    <div class="form-group">
+        <label>Complemento</label>
+        <input class="form-control" type="text" ng-model="cliente.complemento"/>
+    </div>
+    <div class="form-group">
+        <label>Bairro</label>
+        <input class="form-control" type="text" ng-model="cliente.bairro"/>
+    </div>
+    <div class="form-group">
+        <label>Cidade</label>
+        <input class="form-control" type="text" ng-model="cliente.cidade"/>
+    </div>
+    <div class="form-group">
+        <label>Estado</label>
+        <input class="form-control" type="text" ng-model="cliente.estado"/>
+    </div>    
+    <div class="form-group">
+        <label>País</label>
+        <input class="form-control" type="text" ng-model="cliente.pais"/>
+    </div>
+    <input class="btn btn-primary" type="button" value="Salvar" ng-click="salvar();" />
+    <button class="btn btn-success" onclick="window.location.href='javascript:window.history.go(-1)'">Voltar</button>
+  </div>
+</div>
