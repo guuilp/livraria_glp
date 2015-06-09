@@ -29,19 +29,19 @@
     */
 
   $dbh->exec("INSERT INTO CLIENTE VALUES( DEFAULT      , 
-                                          $nome        , 
-                                          $cpf         , 
-                                          $rg          , 
-                                          $nascimento  , 
-                                          $email       , 
-                                          $telefone    , 
-                                          $cep         , 
-                                          $endereco    , 
-                                          $numero      , 
-                                          $complemento , 
-                                          $bairro      , 
-                                          $cidade      , 
-                                          $estado      , 
-                                          $pais       )" ) or die($dbh->errorInfo());;
+                                          '$nome'        , 
+                                          '$cpf'         , 
+                                          '$rg'          , 
+                                          '$nascimento'  , 
+                                          '$email'       , 
+                                          '$telefone'    , 
+                                          '$cep'         , 
+                                          '$endereco'    , 
+                                          '$numero'      , 
+                                          '$complemento' , 
+                                          '$bairro'      , 
+                                          '$cidade'      , 
+                                          '$estado'      , 
+                                          '$pais'       )" ) or die($dbh->errorInfo());;
 
 ?>
