@@ -42,6 +42,6 @@
                                           '$bairro'      , 
                                           '$cidade'      , 
                                           '$estado'      , 
-                                          '$pais'       )" ) or die($dbh->errorInfo());;
+                                          '$pais'       )" ) or die($dbh->errorInfo());
 
 ?>

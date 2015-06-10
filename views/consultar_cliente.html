@@ -1,0 +1,30 @@
+<div class="well">
+  <div class="container">
+      <h2>Dados</h2>
+      <div class="form-group">
+        <label>Nome</label>
+          <input class="form-control" type="text" ng-model="filtroNome" />
+      </div>
+  </div>
+
+  <div class="container resultado">      
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="resposta in respostas | filter : filtroNome">
+          <td>{{resposta.nome}}</td>
+          <td>{{resposta.cpf}}</td>
+          <td>{{resposta.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button class="btn btn-success" onclick="window.location.href='javascript:window.history.go(-1)'">Voltar</button>
+</div>

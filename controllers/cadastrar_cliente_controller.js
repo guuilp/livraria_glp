@@ -16,31 +16,28 @@ app.controller('cadastrar_cliente_controller', function($scope, $http){
 
     $scope.salvar = function() {
         var novoCliente = {
-            nome  : $scope.cliente.nome,
-            cpf   : $scope.cliente.cpf,
-            rg    : $scope.cliente.rg   ,
-            nascimento : $scope.cliente.nascimento,
-            email : $scope.cliente.email,
-            telefone : $scope.cliente.telefone,
-            cep : $scope.cliente.cep,
-            endereco : $scope.cliente.endereco,
-            numero : $scope.cliente.numero,
+            nome        : $scope.cliente.nome,
+            cpf         : $scope.cliente.cpf,
+            rg          : $scope.cliente.rg   ,
+            nascimento  : $scope.cliente.nascimento,
+            email       : $scope.cliente.email,
+            telefone    : $scope.cliente.telefone,
+            cep         : $scope.cliente.cep,
+            endereco    : $scope.cliente.endereco,
+            numero      : $scope.cliente.numero,
             complemento : $scope.cliente.complemento,
-            bairro : $scope.cliente.bairro,
-            cidade : $scope.cliente.cidade,
-            estado : $scope.cliente.estado,
-            pais : $scope.cliente.pais,
+            bairro      : $scope.cliente.bairro,
+            cidade      : $scope.cliente.cidade,
+            estado      : $scope.cliente.estado,
+            pais        : $scope.cliente.pais,
         }
 
-		var request = $http({
-			method: "post",
-			url: "cadastrar_cliente.php",
-			data: novoCliente
-		});
-
-		request.success(function (data){
-			console.log('Cliente ' + $scope.cliente.nome + ' incluído com sucesso!' + data);
-		});
-
+		$http.post('cadastrar_cliente.php', novoCliente)
+			.success(function(){
+				console.log('Cliente inserido com sucesso.');
+			})
+			.error(function(){
+				console.error('Erro ao incluir um novo  cliente');
+		})
     };
 });
