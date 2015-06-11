@@ -6,7 +6,6 @@
           <input class="form-control" type="text" ng-model="filtroNome" />
       </div>
   </div>
-
   <div class="container resultado">      
     <table class="table">
       <thead>
@@ -17,14 +16,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="resposta in respostas | filter : filtroNome">
-          <td>{{resposta.nome}}</td>
-          <td>{{resposta.cpf}}</td>
-          <td>{{resposta.email}}</td>
+        <tr ng-repeat="cliente in listaDeCliente | filter : filtroNome">
+          <td>{{cliente.nome}}</td>
+          <td>{{cliente.cpf}}</td>
+          <td>{{cliente.id}}</td>
+          <td><button class="btn btn-danger" ng-click="deletar(cliente.id)">Deletar</button></td>
         </tr>
       </tbody>
     </table>
   </div>
-
   <button class="btn btn-success" onclick="window.location.href='javascript:window.history.go(-1)'">Voltar</button>
 </div>
