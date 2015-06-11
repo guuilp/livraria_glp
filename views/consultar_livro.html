@@ -1,0 +1,29 @@
+<div class="well">
+  <div class="container">
+      <h2>Dados</h2>
+      <div class="form-group">
+        <label>Título</label>
+          <input class="form-control" type="text" ng-model="filtroTitulo" />
+      </div>
+  </div>
+  <div class="container resultado">      
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Edição</th>
+          <th>Ano</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="livro in listaDeLivro | filter : filtroTitulo">
+          <td>{{livro.titulo}}</td>
+          <td>{{livro.edicao}}</td>
+          <td>{{livro.ano}}</td>
+          <td><button class="btn btn-danger" ng-click="deletar(resposta.id)">Deletar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="btn btn-success" onclick="window.location.href='javascript:window.history.go(-1)'">Voltar</button>
+</div>
