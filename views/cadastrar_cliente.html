@@ -27,11 +27,11 @@
     </div>
     <div class="form-group">
         <label>CEP</label>
-        <input class="form-control" type="text" ng-model="cliente.cep"/>
+        <input class="form-control" type="text" ng-model="cliente.cep" ng-blur="buscarCep();"/>
     </div>
     <div class="form-group">
         <label>Endereço</label>
-        <input class="form-control" type="text" ng-model="cliente.endereco"/>
+        <input class="form-control" type="text" ng-model="cliente.endereco" ng-disabled="cliente.endereco"/>
     </div>
     <div class="form-group">
         <label>Número</label>
@@ -43,19 +43,19 @@
     </div>
     <div class="form-group">
         <label>Bairro</label>
-        <input class="form-control" type="text" ng-model="cliente.bairro"/>
+        <input class="form-control" type="text" ng-model="cliente.bairro" ng-disabled="cliente.bairro"/>
     </div>
     <div class="form-group">
         <label>Cidade</label>
-        <input class="form-control" type="text" ng-model="cliente.cidade"/>
+        <input class="form-control" type="text" ng-model="cliente.cidade" ng-disabled="cliente.cidade"/>
     </div>
     <div class="form-group">
         <label>Estado</label>
-        <input class="form-control" type="text" ng-model="cliente.estado"/>
+        <input class="form-control" type="text" ng-model="cliente.estado" ng-disabled="cliente.estado"/>
     </div>    
     <div class="form-group">
         <label>País</label>
-        <input class="form-control" type="text" ng-model="cliente.pais"/>
+        <input class="form-control" type="text" ng-model="cliente.pais" ng-disabled="cliente.pais"/>
     </div>
     <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Salvar</button>
     <!-- Modal -->

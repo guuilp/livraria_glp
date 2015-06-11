@@ -5,7 +5,7 @@ app.controller('cadastrar_cliente_controller', function($scope, $http){
 					   nascimento  : '',
 					   email       : '',
 					   telefone    : '',
-					   CEP         : '',
+					   cep         : '',
 					   Endereco    : '',
 					   numero      : '',
 					   complemento : '',
@@ -14,6 +14,21 @@ app.controller('cadastrar_cliente_controller', function($scope, $http){
 					   estado      : '',
 					   pais        : '' 
 					};
+
+    $scope.buscarCep = function(){
+    	$http.get('http://viacep.com.br/ws/' + $scope.cliente.cep + '/json/ ')
+    		.success(function(data){
+    			$scope.cliente.bairro = data.bairro;
+    			$scope.cliente.complemento = data.complemento;
+    			$scope.cliente.cidade = data.localidade;
+    			$scope.cliente.endereco = data.logradouro;
+    			$scope.cliente.estado = data.uf;
+    			$scope.cliente.pais = 'Brasil';
+    		})
+    		.error(function(){
+    			console.error('Não foi possível recuperar o endereço para o CEP digitado.')
+    		})
+    };
 
     $scope.salvar = function() {
         var novoCliente = {
