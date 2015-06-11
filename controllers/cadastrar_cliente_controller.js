@@ -1,18 +1,19 @@
 app.controller('cadastrar_cliente_controller', function($scope, $http){
-	$scope.cliente = { nome  : '', 
-					   cpf   : '', 
-					   rg : '',
-					   nascimento : '',
-					   email : '',
-					   telefone : '',
-					   CEP : '',
-					   Endereco : '',
-					   numero : '',
+	$scope.cliente = { nome        : '', 
+					   cpf         : '', 
+					   rg          : '',
+					   nascimento  : '',
+					   email       : '',
+					   telefone    : '',
+					   CEP         : '',
+					   Endereco    : '',
+					   numero      : '',
 					   complemento : '',
-					   bairro : '',
-					   cidade : '',
-					   estado : '',
-					   pais : '' };
+					   bairro      : '',
+					   cidade      : '',
+					   estado      : '',
+					   pais        : '' 
+					};
 
     $scope.salvar = function() {
         var novoCliente = {
@@ -29,7 +30,7 @@ app.controller('cadastrar_cliente_controller', function($scope, $http){
             bairro      : $scope.cliente.bairro,
             cidade      : $scope.cliente.cidade,
             estado      : $scope.cliente.estado,
-            pais        : $scope.cliente.pais,
+            pais        : $scope.cliente.pais
         }
 
 		$http.post('cadastrar_cliente.php', novoCliente)
