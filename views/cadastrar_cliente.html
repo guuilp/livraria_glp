@@ -9,17 +9,17 @@
 	    </div>
 	    <div class="col-md-4">
 	    	<div>
-	        	<input class="form-control" type="text" placeholder="CPF" ng-model="cliente.cpf" mask="999.999.999-99"/>
+	        	<input class="form-control" type="text" placeholder="CPF" ng-model="cliente.cpf" mask="999.999.999-99" />
 	        </div>
 	    </div>
 	    <div class="col-md-4">
 	        <input class="form-control" type="text" placeholder="RG" ng-model="cliente.rg" mask="99.999.999-9"/>
 	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Data de Nascimento" ng-model="cliente.nascimento" mask='39/19/9999'/>
+	    <div class="col-md-6">
+	        <input class="form-control" type="date" placeholder="Data de Nascimento" ng-model="cliente.nascimento" />
 	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="E-mail" ng-model="cliente.email"/>
+	    <div class="col-md-6">
+	        <input class="form-control" type="email" placeholder="E-mail" ng-model="cliente.email"/>
 	    </div>
     </div>
 
@@ -35,7 +35,7 @@
 	        <input class="form-control" type="text" placeholder="Endereço" ng-model="cliente.endereco" ng-disabled="cliente.endereco"/>
 	    </div>
 	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Número" ng-model="cliente.numero"/>
+	        <input class="form-control" type="number" placeholder="Número" ng-model="cliente.numero"/>
 	    </div>
 	    <div class="col-md-4">
 	        <input class="form-control" type="text" placeholder="Complemento" ng-model="cliente.complemento"/>
