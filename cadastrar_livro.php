@@ -1,5 +1,5 @@
 <?php
-  $dbh = new PDO('pgsql:host=localhost;dbname=livraria_glp', 'postgres');
+  $dbh = new PDO('pgsql:host=localhost;dbname=livraria_glp', 'postgres', 'postgres');
   /*
   * Recuperando todos os detalhes da requisição HTTP do Angular
   */ 
