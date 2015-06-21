@@ -1,5 +1,5 @@
 <?php
-	$dbh = new PDO('pgsql:host=localhost;dbname=livraria_glp', 'postgres', 'postgres');
+	$dbh = new PDO('pgsql:host=localhost;dbname=livraria_glp', 'postgres');
 
 	$sth = $dbh->prepare('SELECT * FROM cliente');
 

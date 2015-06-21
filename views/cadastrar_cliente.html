@@ -1,62 +1,63 @@
 <div class="well">
-  <h2>Incluir cliente {{cliente.nome}}</h2>
   <div class='row'>
-
-    <div class="well well-lg clearfix">
-    	<h4>Dados pessoais</h4>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Nome" ng-model="cliente.nome" ng-trim="true"/>
-	    </div>
-	    <div class="col-md-4">
-	    	<div>
-	        	<input class="form-control" type="text" placeholder="CPF" ng-model="cliente.cpf" mask="999.999.999-99"/>
-	        </div>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="RG" ng-model="cliente.rg" mask="99.999.999-9"/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Data de Nascimento" ng-model="cliente.nascimento" mask='39/19/9999'/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="E-mail" ng-model="cliente.email"/>
-	    </div>
+    <h2>Incluir cliente {{cliente.nome}}</h2>
+    <div class="form-group col-sm-6'">	
+        <label>Nome</label>
+        <input class="form-control" type="text" ng-model="cliente.nome" ng-trim="true"/>
     </div>
-
-    <div class="well well-lg clearfix">
-    	<h4>Dados residenciais</h4>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Telefone" ng-model="cliente.telefone" mask='(99) 9999-9999'/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="CEP" ng-model="cliente.cep" ng-blur="buscarCep();" mask="99999-999"/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Endereço" ng-model="cliente.endereco" ng-disabled="cliente.endereco"/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Número" ng-model="cliente.numero"/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Complemento" ng-model="cliente.complemento"/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Bairro" ng-model="cliente.bairro" ng-disabled="cliente.bairro"/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Cidade" ng-model="cliente.cidade" ng-disabled="cliente.cidade"/>
-	    </div>
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="Estado" ng-model="cliente.estado" ng-disabled="cliente.estado"/>
-	    </div>    
-	    <div class="col-md-4">
-	        <input class="form-control" type="text" placeholder="País" ng-model="cliente.pais" ng-disabled="cliente.pais"/>
-	    </div>
+    <div class="form-group">
+        <label>CPF</label>
+        <input class="form-control" type="text" ng-model="cliente.cpf" mask="999.999.999-99"/>
     </div>
-
+    <div class="form-group">
+        <label>RG</label>
+        <input class="form-control" type="text" ng-model="cliente.rg" mask="99.999.999-9"/>
+    </div>
+    <div class="form-group">
+        <label>Data de Nascimento</label>
+        <input class="form-control" type="text" ng-model="cliente.nascimento" mask='39/19/9999'/>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" type="text" ng-model="cliente.email"/>
+    </div>
+    <div class="form-group">
+        <label>Telefone</label>
+        <input class="form-control" type="text" ng-model="cliente.telefone" mask='(99) 9999-9999'/>
+    </div>
+    <div class="form-group">
+        <label>CEP</label>
+        <input class="form-control" type="text" ng-model="cliente.cep" ng-blur="buscarCep();" mask="99999-999"/>
+    </div>
+    <div class="form-group">
+        <label>Endereço</label>
+        <input class="form-control" type="text" ng-model="cliente.endereco" ng-disabled="cliente.endereco"/>
+    </div>
+    <div class="form-group">
+        <label>Número</label>
+        <input class="form-control" type="text" ng-model="cliente.numero"/>
+    </div>
+    <div class="form-group">
+        <label>Complemento</label>
+        <input class="form-control" type="text" ng-model="cliente.complemento"/>
+    </div>
+    <div class="form-group">
+        <label>Bairro</label>
+        <input class="form-control" type="text" ng-model="cliente.bairro" ng-disabled="cliente.bairro"/>
+    </div>
+    <div class="form-group">
+        <label>Cidade</label>
+        <input class="form-control" type="text" ng-model="cliente.cidade" ng-disabled="cliente.cidade"/>
+    </div>
+    <div class="form-group">
+        <label>Estado</label>
+        <input class="form-control" type="text" ng-model="cliente.estado" ng-disabled="cliente.estado"/>
+    </div>    
+    <div class="form-group">
+        <label>País</label>
+        <input class="form-control" type="text" ng-model="cliente.pais" ng-disabled="cliente.pais"/>
+    </div>
     <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Salvar</button>
-    <button type="button" class="btn btn-success" onclick="window.location.href='javascript:window.history.go(-1)'">Voltar</button>
-
     <!-- Modal -->
     <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
@@ -75,5 +76,6 @@
         </div>
       </div>
     </div>
+    <button type="button" class="btn btn-success" onclick="window.location.href='javascript:window.history.go(-1)'">Voltar</button>
   </div>
 </div>
