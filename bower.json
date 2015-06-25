@@ -6,7 +6,7 @@
     "Guilherme Lima Pereira <guuuilp@gmail.com>"
   ],
   "description": "Trabalho final da materia de DW1",
-  "main": "js/main.js",
+  "main": "js/app.js",
   "keywords": [
     "livraria",
     "glp"
@@ -19,12 +19,12 @@
     "test",
     "tests"
   ],
-	"dependencies": {
-	        "jquery": "latest",
-	        "angular-mask": "latest",
-	        "angular": "latest",
-	        "bootstrap": "latest",
-	        "angular-bootstrap": "latest",
-	        "angular-route": "latest"
-	}
+  "dependencies": {
+    "jquery": "latest",
+    "angular-mask": "latest",
+    "angular": "latest",
+    "bootstrap": "latest",
+    "angular-bootstrap": "~0.13.0",
+    "angular-route": "latest"
+  }
 }
