@@ -15,5 +15,16 @@ app.controller('consultar_livro_controller', function($scope, $http){
 			 });
     };
 
+    $scope.deletar = function(id){
+    	$http.delete('remover_livro.php',{data: {id: id}})
+    		 .success(function(data){
+    		 	console.log('Livro removido com sucesso!' + data);
+    		 	$scope.buscar();
+    		 })
+    		 .error(function(){
+    		 	console.error('Erro ao remover Livro');
+    		 })
+    };
+
     init();
 });
