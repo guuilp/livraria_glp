@@ -1,7 +1,7 @@
 <div class="well">
   <h2>Incluir cliente {{cliente.nome}}</h2>
   <div class='row'>
-
+  	<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)" dismiss-on-timeout='6000'>{{alert.msg}}</alert>
     <div class="well well-lg clearfix">
     	<h4>Dados pessoais</h4>
 	    <div class="col-md-4">
