@@ -19,7 +19,7 @@
         <tr ng-repeat="cliente in listaDeCliente | filter : filtroNome">
           <td>{{cliente.nome}}</td>
           <td>{{cliente.cpf}}</td>
-          <td>{{cliente.id}}</td>
+          <td>{{cliente.email}}</td>
           <td><button class="btn btn-danger" ng-click="deletar(cliente.id)">Deletar</button></td>
         </tr>
       </tbody>
